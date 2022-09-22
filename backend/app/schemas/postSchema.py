@@ -1,13 +1,14 @@
 from sqlite3 import Date
 from pydantic import BaseModel
-from datetime import date, datetime
+
+import datetime
 
 class Post(BaseModel):
     id: str
     title: str
     body: str
     votes: int
-    date: datetime
+    date: datetime.date
 
     class Config:
         orm_mode = True

@@ -1,7 +1,11 @@
+from datetime import datetime
+from email.policy import default
+from time import timezone
 from sqlalchemy import Integer, String, Column, VARCHAR, Date
 from sqlalchemy.orm import relationship
 from ..repositories.database import Base
 from uuid import uuid4
+import datetime
 
 def get_uuid():
     return uuid4().hex
